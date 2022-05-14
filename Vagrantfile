@@ -1,11 +1,11 @@
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "tknerr/baseimage-ubuntu-18.04"
+  config.vm.box = "ubuntu/focal64"
 
-#   config.vm.provider "docker" do |v|
-#     v.memory = 2048
-#     v.cpus = 2
-#   end
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 2048
+    v.cpus = 2
+  end
 
   config.vm.define "hadoop-master" do |config|
     config.vm.network :private_network, ip:"10.20.30.11"
