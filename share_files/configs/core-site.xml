@@ -1,0 +1,4 @@
+<configuration>
+    <property><name>fs.defaultFS</name><value>hdfs://hadoop-master:9000</value><description>Where HDFS NameNode can be found on the network</description></property>
+    <property><name>hadoop.tmp.dir</name><value>/var/lib/hadoop</value><description>Where Hadoop will place all of its working files</description></property>
+</configuration>
