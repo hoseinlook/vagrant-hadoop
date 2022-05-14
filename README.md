@@ -14,8 +14,8 @@ vagrant up
 ```
 
 ## webUI
-+ 10.20.30.11:9870  #hdfs webUI
-+ 10.20.30.11:8088  #yarn webUI
++ http://10.20.30.11:9870  #hdfs webUI
++ http://10.20.30.11:8088  #yarn webUI
 
 
 ### useful commands:
