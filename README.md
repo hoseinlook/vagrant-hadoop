@@ -16,7 +16,7 @@ vagrant up
 ### note:
 for Apple Silicon run this commands
 
-[docker_branch]() use docker as a provider instead of virtualbox
+[docker_branch](https://github.com/hoseinlook/vagrant-hadoop/tree/docker_provider) use docker as a provider instead of virtualbox
 ```bash
 git checkout docker_provider
 vagrant up
