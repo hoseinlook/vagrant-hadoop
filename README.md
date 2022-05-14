@@ -9,7 +9,16 @@ this project is a simple hadoop setup with vagrant
 
 # how to run
 just run this command
+
 ```bash
+vagrant up
+```
+### note:
+for Apple Silicon run this commands
+
+[docker_branch]() use docker as a provider instead of virtualbox
+```bash
+git checkout docker_provider
 vagrant up
 ```
 
