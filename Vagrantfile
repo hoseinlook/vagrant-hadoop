@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   end
 
   (1..2).each do |i|
-    config.vm.define "hadoop_worker#{i}" do |config|
+    config.vm.define "hadoop-worker#{i}" do |config|
       config.vm.network :private_network, ip:"10.20.30.2#{i}"
       config.vm.hostname = "hadoop-worker#{i}"
       config.vm.provision :shell, path: "scripts/1_download_and_install_hadoop.sh"
