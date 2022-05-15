@@ -39,14 +39,14 @@ echo "
 sudo cp /vagrant/share_files/configs/{core,hdfs,mapred,yarn}-site.xml /opt/hadoop/etc/hadoop/
 
 ## Config hadoop-env
-sed -i -E 's/#? *export JAVA_HOME=.*/export JAVA_HOME=\/usr\/lib\/jvm\/default-java/' /opt/hadoop/etc/hadoop/hadoop-env.sh
-sed -i -E 's/#? *export HADOOP_LOG_DIR=.*/export HADOOP_LOG_DIR=\/var\/log\/hadoop/' /opt/hadoop/etc/hadoop/hadoop-env.sh
-sed -i -E 's/#? *export HDFS_NAMENODE_USER=.*/export HDFS_NAMENODE_USER=hadoop/' /opt/hadoop/etc/hadoop/hadoop-env.sh
-echo "#################### Others ####################" >> /opt/hadoop/etc/hadoop/hadoop-env.sh
-echo "export HDFS_DATANODE_USER=hadoop" >> /opt/hadoop/etc/hadoop/hadoop-env.sh
-echo "export HDFS_SECONDARYNAMENODE_USER=hadoop" >> /opt/hadoop/etc/hadoop/hadoop-env.sh
-echo "export YARN_RESOURCEMANAGER_USER=hadoop" >> /opt/hadoop/etc/hadoop/hadoop-env.sh
-echo "export YARN_NODEMANAGER_USER=hadoop" >> /opt/hadoop/etc/hadoop/hadoop-env.sh
+sudo -u hadoop sed -i -E 's/#? *export JAVA_HOME=.*/export JAVA_HOME=\/usr\/lib\/jvm\/default-java/' /opt/hadoop/etc/hadoop/hadoop-env.sh
+sudo -u hadoop sed -i -E 's/#? *export HADOOP_LOG_DIR=.*/export HADOOP_LOG_DIR=\/var\/log\/hadoop/' /opt/hadoop/etc/hadoop/hadoop-env.sh
+sudo -u hadoop sed -i -E 's/#? *export HDFS_NAMENODE_USER=.*/export HDFS_NAMENODE_USER=hadoop/' /opt/hadoop/etc/hadoop/hadoop-env.sh
+echo "#################### Others ####################" | sudo -a  tee /opt/hadoop/etc/hadoop/hadoop-env.sh
+echo "export HDFS_DATANODE_USER=hadoop" | sudo tee -a  /opt/hadoop/etc/hadoop/hadoop-env.sh
+echo "export HDFS_SECONDARYNAMENODE_USER=hadoop" | sudo tee -a  /opt/hadoop/etc/hadoop/hadoop-env.sh
+echo "export YARN_RESOURCEMANAGER_USER=hadoop" | sudo tee -a  /opt/hadoop/etc/hadoop/hadoop-env.sh
+echo "export YARN_NODEMANAGER_USER=hadoop" | sudo tee -a /opt/hadoop/etc/hadoop/hadoop-env.sh
 
 ## Config workers
 echo "" | sudo tee /opt/hadoop/etc/hadoop/workers
