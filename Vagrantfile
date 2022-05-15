@@ -7,6 +7,10 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "hadoop-master" do |config|
     config.vm.network :private_network, ip:"10.20.30.11"
+    config.vm.network :forwarded_port,  guest: 9870, host: 9870
+
+    config.vm.network :forwarded_port, guest: 8088, host: 8088
+
     config.vm.hostname = "hadoop-master"
     config.vm.provision :shell, path: "scripts/1_download_and_install_hadoop.sh"
     config.vm.provision :shell, path: "scripts/2_run_master.sh"
