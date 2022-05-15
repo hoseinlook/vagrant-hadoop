@@ -41,6 +41,11 @@ if you are using docker your webUI address will be changed because in docker ver
     ```bash 
     vagrant halt
     ```
+
++ ssh to a specific vm
+    ```bash 
+    vagrant ssh <YOUR-VM-NAME>
+    ```
   
 # References
 + [hadoop](https://hadoop.apache.org/docs/stable/)
