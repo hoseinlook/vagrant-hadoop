@@ -46,7 +46,19 @@ if you are using docker your webUI address will be changed because in docker ver
     ```bash 
     vagrant ssh <YOUR-VM-NAME>
     ```
-  
+
+# Optional
+run this command to set hosts
+```bash
+sudo sed -i '/hadoop/d' /etc/hosts
+echo "
+10.20.30.11 hadoop-master
+10.20.30.21 hadoop-worker1
+10.20.30.22 hadoop-worker2
+10.20.30.23 hadoop-worker3
+" | sudo tee -a /etc/hosts
+```
+
 # References
 + [hadoop](https://hadoop.apache.org/docs/stable/)
 + [hadoop-core-configs](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/core-default.xml)
