@@ -28,7 +28,7 @@ vagrant up
 + http://10.20.30.11:8088  #yarn webUI
 
 ### Note:
-if you are using docker your webUI address will be changed because in docker version project use port_forwarding instead of NAT
+if you are using docker your webUI address will be changed because in docker version project use port_forwarding 
 + http://localhost:9870  #hdfs webUI
 + http://localhost:8088  #yarn webUI
 
