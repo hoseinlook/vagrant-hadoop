@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "tknerr/baseimage-ubuntu-18.04"
+  config.vm.box = "tknerr/baseimage-ubuntu-20.04"
 
   config.vm.provider "docker"
 

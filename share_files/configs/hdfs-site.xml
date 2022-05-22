@@ -1,5 +1,5 @@
 <configuration>
-    <property><name>dfs.replication</name><value>2</value><description>The default replication factor of files on HDFS</description></property>
+    <property><name>dfs.replication</name><value>1</value><description>The default replication factor of files on HDFS</description></property>
     <property><name>dfs.block.size</name><value>16777216</value><description>The default block size in bytes of data saved to HDFS</description>
 	</property>
 </configuration>
