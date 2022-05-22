@@ -27,13 +27,7 @@ sudo chown hadoop:hadoop -R /opt/hadoop/
 sudo mkdir /var/{lib,log}/hadoop
 sudo chown hadoop:hadoop -R /var/{lib,log}/hadoop
 
-## Edit hosts
-echo "
-127.0.0.1 localhost
-10.20.30.11 hadoop-master
-10.20.30.21 hadoop-worker1
-10.20.30.22 hadoop-worker2
-" | sudo tee  /etc/hosts
+
 
 ## Copy configs
 sudo cp /vagrant/share_files/configs/{core,hdfs,mapred,yarn}-site.xml /opt/hadoop/etc/hadoop/
