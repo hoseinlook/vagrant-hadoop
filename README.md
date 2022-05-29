@@ -8,6 +8,11 @@ this project is a simple hadoop setup with vagrant
 # Install
 At first [install vagrant](https://www.vagrantup.com/downloads)
 
+Then install Virtualbox
+```bash
+sudo apt install virtualbox
+```
+
 # How to run
 just run this command
 
