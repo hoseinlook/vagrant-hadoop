@@ -39,7 +39,7 @@ if you are using docker your webUI address will be changed because in docker ver
 + http://localhost:9870  #hdfs webUI
 + http://localhost:8088  #yarn webUI
 
-### Useful commands:
+### Some Useful Vagrant commands:
 + delete vm's with their files
     ```bash 
     vagrant destroy
@@ -59,6 +59,15 @@ if you are using docker your webUI address will be changed because in docker ver
     vagrant ssh hadoop-worker1
     ```
 
+### Some Useful Hadoop commands (in master or worker vm's):
++ ls in hdfs
+    ```bash 
+    hdfs dfs -ls /your/path/to
+    ```
++ put file from your directory to hdfs
+    ```bash 
+    hdfs dfs -put  /path/to/your-file /path/to/hdfs
+    ```
 # Optional
 run this command to set hosts
 ```bash
