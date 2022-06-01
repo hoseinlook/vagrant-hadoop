@@ -22,6 +22,7 @@ fi
 ## Copy hadoop directory to opt
 sudo cp -R /vagrant/share_files/cache/hadoop-${HADOOP_VERSION} /opt/hadoop
 sudo chown hadoop:hadoop -R /opt/hadoop/
+echo 'export PATH=$PATH:/opt/hadoop/bin' | sudo tee -a ~/.bashrc
 
 ## Create hadoop directories
 sudo mkdir /var/{lib,log}/hadoop
