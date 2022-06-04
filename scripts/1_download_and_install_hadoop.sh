@@ -7,7 +7,8 @@ sudo apt install nano
 ## Install java
 # sudo apt-get update -y
 sudo apt-get install -y default-jre
-# java --version
+# Install below jdk to be able to use jps command
+sudo apt install openjdk-8-jdk-headless
 
 ## Add hadoop user
 sudo adduser --system --home /home/hadoop --shell /bin/bash --group --disabled-login hadoop
