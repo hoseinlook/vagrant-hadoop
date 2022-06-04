@@ -60,10 +60,19 @@ if you are using docker your webUI address will be changed because in docker ver
     ```
 
 ### Some Useful Hadoop commands (in master or worker vm's):
+after ssh change your unix user to hadoop
+```bash
+sudo su hadoop
+```
+now you are able to use below commands! 
 + ls in hdfs
     ```bash 
     hdfs dfs -ls /your/path/to
     ```
++ make directories in hdfs
+  ```bash
+  hdfs dfs -mkdir -p /your/path
+  ```
 + put file from your directory to hdfs
     ```bash 
     hdfs dfs -put  /path/to/your-file /path/to/hdfs
