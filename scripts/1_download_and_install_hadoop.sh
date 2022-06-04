@@ -21,7 +21,12 @@ fi
 ## Copy hadoop directory to opt
 sudo cp -R /vagrant/share_files/cache/hadoop-${HADOOP_VERSION} /opt/hadoop
 sudo chown hadoop:hadoop -R /opt/hadoop/
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/hadoop/bin
 echo  'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/hadoop/bin"' |sudo tee /etc/environment
+echo  "JAVA_HOME=/usr/lib/jvm/default-java" |sudo tee -a /etc/environment
+echo  "HADOOP_HOME=/opt/hadoop" |sudo tee -a /etc/environment
+source /etc/environment
+sudo sed -i -E "s@Defaults\s*secure_path=.*@Defaults secure_path=${PATH}@"  /etc/sudoers
 
 ## Create hadoop directories
 sudo mkdir /var/{lib,log}/hadoop
