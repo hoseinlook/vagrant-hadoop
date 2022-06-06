@@ -16,7 +16,8 @@ sudo apt install virtualbox
 # How to run
 just run this command's
 
-```bash
+** note: you need to  a stable internet to have a correct installation
+```bas
 sudo mkdir -p /etc/vbox/
 echo "* 10.0.0.0/8 192.168.0.0/16"|sudo tee /etc/vbox/networks.conf
 vagrant up
